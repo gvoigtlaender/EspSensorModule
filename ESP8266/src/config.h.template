@@ -1,0 +1,16 @@
+#ifndef ESP8266_SRC_CONFIG_H_
+#define ESP8266_SRC_CONFIG_H_
+
+/* Copyright 2018 Georg Voigtlaender gvoigtlaender@googlemail.com */
+
+#define USE_DISPLAY 1
+#define DTH_TYPE DHT22
+#define DTH_PIN 12
+#define LEDPIN 13
+#define ESP_STATUS 2
+#define HAS_NTP FALSE
+#define WLAN_SSID "<SSID>"
+#define WLAN_PASSWD "<PASSWD>"
+#define mqtt_server "<IP>"   // 3"  // 44"
+
+#endif  // ESP8266_SRC_CONFIG_H_
