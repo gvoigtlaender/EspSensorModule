@@ -11,6 +11,11 @@
 #define HAS_NTP FALSE
 #define WLAN_SSID "<SSID>"
 #define WLAN_PASSWD "<PASSWD>"
-#define mqtt_server "<IP>"   // 3"  // 44"
+#define mqtt_server "<IP>"
+
+#define WIFI_STATIC 0
+// #define WIFI_STATIC_IP "<IPADDR>"
+// #define WIFI_STATIC_GW "<GATEWAY>"
+// #define WIFI_STATIC_SN "<SUBNET>"
 
 #endif  // ESP8266_SRC_CONFIG_H_

@@ -789,10 +789,12 @@ void CControl_Wifi::control(bool bForce /*= false*/) {
       _log("Connecting to %s",
         EspSensorModule.m_sWifiSSID.c_str());
       {
-        IPAddress oIP = IPAddress(192, 168, 2, 41);
-        IPAddress oGW = IPAddress(192, 168, 2, 1);
-        IPAddress oSN = IPAddress(255, 255, 255, 0);
+#if WIFI_STATIC == 1
+        IPAddress oIP; oIP.fromString(WIFI_STATIC_IP);
+        IPAddress oGW; oGW.fromString(WIFI_STATIC_GW);
+        IPAddress oSN; oSN.fromString(WIFI_STATIC_SN);
         WiFi.config(oIP, oGW, oSN);
+#endif
         WiFi.mode(WIFI_AP_STA);
 
         WiFi.persistent(false);
