@@ -4,7 +4,7 @@
 #include <vector>
 #include <fstream>
 
-const int VERSION = 2001;
+// const int VERSION = 2001;
 const char VERSION_STRING[] = "2.0.0.3";
 
 #include "./config.h"
@@ -509,11 +509,12 @@ void callback(char* topic, byte* payload, unsigned int length) {
 uint32 _time, _timeStart;
 void setup() {
   _timeStart = millis();
-
-  Serial.begin(115200);
+  // delay(200);
+  Serial.begin(74880);
+  // delay(1000);
   Serial.println();
   CControl::Log("setup version: %s", VERSION_STRING);
-  // delay(2000);
+  // delay(1000);
   SetupEspSensorModule();
 
   client.setServer(mqtt_server, 1883);
@@ -582,7 +583,7 @@ void reconnect() {
   }
 }
 */
-const int c_nValues = 3;
+// const int c_nValues = 3;
 int nLoop = 0;
 float hic = 0.0;
 float hum = 0.0;

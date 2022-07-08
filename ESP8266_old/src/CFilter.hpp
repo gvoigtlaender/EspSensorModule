@@ -1,4 +1,6 @@
 /* Copyright 2018 Georg Voigtlaender gvoigtlaender@googlemail.com */
+#ifndef SRC_CFILTER_HPP_
+#define SRC_CFILTER_HPP_
 #include <vector>
 
 template<typename T>
@@ -31,3 +33,4 @@ class CFilter{
   T  m_Sum;
   std::vector<T> m_Values;
 };
+#endif  // SRC_CFILTER_HPP_
